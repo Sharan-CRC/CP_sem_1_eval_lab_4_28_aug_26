@@ -1,30 +1,24 @@
 #include <stdio.h>
+#include <string.h>
+
 int main()
 {
-    int n;
-    int inc = 0;
-    //asking user for length of number
-    printf("Enter the length of your number: ");
-    scanf("%d", &n);
-    int num[n];
-    //getting user input for the digits of the number
-    while (inc<=(n-1)){
-        printf("Enter the digit no. %d : ", inc+1);
-        scanf("%d", &num[inc]);
-        inc++;
+    char name[100]; //initializing placeholder variable for name
+
+    //taking user input
+    printf("Enter your name: ");
+    scanf("%s", name);
+
+    int i = strlen(name); //setting the variable i to be the length of the inputted string
+
+    //printing the final output
+
+    printf("\n\nThe reversed name is:");
+    for (i; i>=0; i--){
+        printf("%c", name[i]);
+
     }
-    printf("\n");
-    printf("Your number is:\n");
-    for (int m = 0; m<n; m++){
-        printf("%d", num[m]);
-    }
-    printf("\n");
-    printf("The reversed number is:\n");
-    //printing the reversed number
-    for (int t = 0; t<n; t++){
-        printf("%d", num[inc-1]);
-        inc--;
-    }
-    printf("\n");
+    //formatting the output
+    printf("\n\n\n");
     return 0;
 }
